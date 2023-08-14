@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build:all": "node ./scripts/build --all"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.12.9",
+    "lerna": "^7.1.4",
+    "lodash": "^4.17.21",
+    "yargs": "^17.7.2"
+  }
+}

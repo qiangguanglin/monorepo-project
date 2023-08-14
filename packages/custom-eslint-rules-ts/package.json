@@ -1,0 +1,44 @@
+{
+  "name": "custom-eslint-rules-ts",
+  "version": "0.0.1",
+  "description": "自定义eslint规则for ts",
+  "keywords": [
+    "eslint"
+  ],
+  "author": "qiangguanglin",
+  "homepage": "https://github.com/qiangguanglin/monorepo-project#readme",
+  "license": "ISC",
+  "main": "build/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "build",
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "registry": "http://r.npm.sankuai.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiangguanglin/monorepo-project.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "node ../../scripts/build"
+  },
+  "bugs": {
+    "url": "https://github.com/qiangguanglin/monorepo-project/issues"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^5.56.0",
+    "@typescript-eslint/utils": "^5.56.0",
+    "requireindex": "~1.1.0",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}

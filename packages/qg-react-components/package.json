@@ -1,0 +1,34 @@
+{
+  "name": "qg-react-components",
+  "version": "0.0.1",
+  "description": "qg-react组件库",
+  "keywords": [
+    "vue"
+  ],
+  "author": "qiangguanglin",
+  "homepage": "https://github.com/qiangguanglin/monorepo-project#readme",
+  "license": "ISC",
+  "main": "build/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "build",
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "registry": "http://r.npm.sankuai.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiangguanglin/monorepo-project.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/index.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/qiangguanglin/monorepo-project/issues"
+  }
+}
