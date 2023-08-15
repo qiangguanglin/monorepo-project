@@ -1295,6 +1295,11 @@
   resolved "http://r.npm.sankuai.com/@types/normalize-package-data/download/@types/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha1-0zV0eaD9/dWQf+Z+F+CoXJBuEwE=
 
+"@types/prismjs@^1.26.0":
+  version "1.26.0"
+  resolved "http://r.npm.sankuai.com/@types/prismjs/download/@types/prismjs-1.26.0.tgz#a1c3809b0ad61c62cac6d4e0c56d610c910b7654"
+  integrity sha1-ocOAmwrWHGLKxtTgxW1hDJELdlQ=
+
 "@types/q@^1.5.1":
   version "1.5.5"
   resolved "http://r.npm.sankuai.com/@types/q/download/@types/q-1.5.5.tgz#75a2a8e7d8ab4b230414505d92335d1dcb53a6df"

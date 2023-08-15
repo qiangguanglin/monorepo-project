@@ -7,7 +7,11 @@ const zhSidebar: SidebarItem[] = [
       title: '组件',
       collapsable: false,
       children: [
-        ['../guide/Input', 'Input']
+        ['../guide/Input', 'Input'],
+        ['../guide/EditInput', 'EditInput'],
+        ['../guide/InheritAutocomplete', 'InheritAutocomplete'],
+        ['../guide/InheritInput', 'InheritInput'],
+        ['../guide/Menu', 'Menu']
       ]
     }
 ]

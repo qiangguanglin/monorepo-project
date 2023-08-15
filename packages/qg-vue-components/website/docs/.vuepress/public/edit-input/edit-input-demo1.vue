@@ -1,6 +1,6 @@
 <template>
     <div>
-        <qg-input v-model="inputValue"></qg-input>
+        <qg-edit-input v-model="inputValue"></qg-edit-input>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'InputDemo1',
+    name: 'EditInputDemo1',
     setup() {
         const inputValue = ref('我是初始值');
         return {

@@ -9,14 +9,12 @@
 		"strict": true,
 		"moduleResolution": "node",
 		"baseUrl": "./",
-		"paths": {
-			"@/*": ["./lib/*"]
-		},
+		"paths": {},
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 	},
-	"include": ["./lib/**/*.vue","./lib/**/*.ts"],
-	"exclude": ["./node_modules", "./website"]
+	"include": ["./packages/**/*.vue","./packages/**/*.ts"],
+	"exclude": ["./node_modules"]
 }

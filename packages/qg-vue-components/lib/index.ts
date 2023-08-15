@@ -5,7 +5,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(element);
 const install = (Vue:VueConstructor, opts={}) => {
-    console.log('=====', components);
     components.forEach((component) => {
         Vue.component(component.name, component);
     })
