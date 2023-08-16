@@ -9,18 +9,16 @@
 		"strict": true,
 		"moduleResolution": "node",
 		"noEmitOnError": false,
-		"baseUrl": "./",
+		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./docs/*"]
+			"@/*": ["docs/*"]
 		},
-		"typeRoots": ["types", "node_modules/@types"],
-		"types": ["vue-shims.d.ts"],
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"allowSyntheticDefaultImports": true,
 	},
-	"include": ["./docs/**/*.vue","./docs/**/*.ts", "./types/*.d.ts"],
-	"exclude": ["./node_modules"]
+	"include": ["docs/**/*.vue","docs/**/*.ts"],
+	"exclude": ["node_modules"]
 }

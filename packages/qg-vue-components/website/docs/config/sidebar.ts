@@ -1,4 +1,4 @@
-import { SidebarItem } from '../../types/config';
+import { SidebarItem } from '../types/config';
 // 中文左侧导航栏
 const zhSidebar: SidebarItem[] = [
     // 首页-介绍

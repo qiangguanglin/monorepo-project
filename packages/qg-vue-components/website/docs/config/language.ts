@@ -1,4 +1,4 @@
-import { Locales } from '../../types/config'
+import { Locales } from '../types/config'
 
 export default {
     '/': {
