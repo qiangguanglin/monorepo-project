@@ -42,3 +42,7 @@ export default defineComponent({
     }
 })
 </script>
+
+<style scoped lang="scss">
+/* 样式 */
+</style>

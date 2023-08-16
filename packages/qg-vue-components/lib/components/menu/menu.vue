@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="item in data" :key="item.value">
-            <el-submenu v-if="item.children || (Array.isArray(item.children) && item.children.length)" :index="item.value">
+            <el-submenu v-if="item.children && (Array.isArray(item.children) && item.children.length)" :index="item.value">
                 <template slot="title">
                     <i v-if="item.icon" :class="item.icon"></i>
                     <span>{{item.label}}</span>
@@ -29,8 +29,6 @@ export default defineComponent({
         }
     },
     setup(props) {
-        console.log('666666');
-        console.log('----', props.data);
         const data = ref(props.data);
         return {
             data

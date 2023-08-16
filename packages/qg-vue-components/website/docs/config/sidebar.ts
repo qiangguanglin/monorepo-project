@@ -7,11 +7,14 @@ const zhSidebar: SidebarItem[] = [
       title: '组件',
       collapsable: false,
       children: [
-        ['../guide/Input', 'Input'],
-        ['../guide/EditInput', 'EditInput'],
-        ['../guide/InheritAutocomplete', 'InheritAutocomplete'],
-        ['../guide/InheritInput', 'InheritInput'],
-        ['../guide/Menu', 'Menu']
+        ['../guide/Input', '输入框'],
+        ['../guide/EditInput', '可编辑输入框'],
+        ['../guide/InheritAutocomplete', '继承的自动完成输入框'],
+        ['../guide/InheritInput', '继承的输入框'],
+        ['../guide/Menu', '递归菜单栏'],
+        ['../guide/Table', '表格'],
+        ['../guide/Select', '选择器'],
+        ['../guide/Hoc', '高阶组件']
       ]
     }
 ]

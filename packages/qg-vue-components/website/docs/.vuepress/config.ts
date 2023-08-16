@@ -15,11 +15,14 @@ export default defineConfig({
     '@vuepress/plugin-back-to-top',
     'typescript',
     [
-      'container',
+      'vuepress-plugin-typescript',
       {
-        type: 'code',
-        before: (info) => `<code-block lang="${info}">`,
-        after: '</code-block>',
+        tsLoaderOptions: {
+          configFile: '../../tsconfig.json',
+          // 设置为 true，以在遇到 TypeScript 错误时不中断构建
+          transpileOnly: true,
+          // 其他 ts-loader 选项
+        },
       },
     ],
   ],

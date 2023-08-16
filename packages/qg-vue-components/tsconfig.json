@@ -8,15 +8,16 @@
 		"outDir": "./",
 		"strict": true,
 		"moduleResolution": "node",
-		"baseUrl": "./",
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
 		"paths": {
-			"@/*": ["./lib/*"]
+			"@/*": ["lib/*"]
 		},
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 	},
-	"include": ["./lib/**/*.vue","./lib/**/*.ts"],
-	"exclude": ["./node_modules", "./website"]
+	"include": ["lib/**/*.vue","lib/**/*.ts","lib/types/*.d.ts"],
+	"exclude": ["node_modules", "website"]
 }

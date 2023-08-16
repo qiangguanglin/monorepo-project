@@ -1,9 +1,9 @@
 <template>
-    <qg-menu :menuList="menuList"/>
+    <qg-menu class="qg-menu" :menuList="menuList"/>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { defineComponent } from 'vue';
 import { menuList } from './config';
 
 export default defineComponent({
@@ -14,5 +14,9 @@ export default defineComponent({
         }
     }
 })
-
 </script>
+<style lang="scss" scoped>
+.qg-menu {
+    width: 180px;
+}
+</style>

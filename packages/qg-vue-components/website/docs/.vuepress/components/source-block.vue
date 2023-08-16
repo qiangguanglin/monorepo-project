@@ -32,6 +32,7 @@ function toggleState() {
   .comp-container {
       padding: 10px;
       border-bottom: 1px solid #ebebeb;
+      overflow: auto;
   }
   .is-show-code {
       line-height: 44px;
