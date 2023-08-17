@@ -14,7 +14,8 @@ const zhSidebar: SidebarItem[] = [
         ['../guide/Menu', '递归菜单栏'],
         ['../guide/Table', '表格'],
         ['../guide/Select', '选择器'],
-        ['../guide/Hoc', '高阶组件']
+        ['../guide/Hoc', '高阶组件'],
+        ['../guide/Directives', '自定义指令']
       ]
     }
 ]

@@ -1,4 +1,4 @@
-import qgInput from '@/components/input.vue';
+import qgInput from './input.vue';
 import qgEditInput from './edit-input.vue';
 import qgInheritAutocomplete from './inherit-autocomplete.vue';
 import qgInheritInput from './inherit-input.vue';

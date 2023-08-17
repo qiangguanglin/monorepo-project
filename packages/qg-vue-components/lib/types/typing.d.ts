@@ -17,8 +17,14 @@ interface SelectItem {
     label: string
 }
 
+interface DirectElement extends HTMLElement {
+    $value: string,
+    handler: () => void
+}
+
 export {
     MenuItem,
     TableColumn,
-    SelectItem
+    SelectItem,
+    DirectElement
 }

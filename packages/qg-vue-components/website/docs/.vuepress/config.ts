@@ -13,12 +13,11 @@ export default defineConfig({
   themeConfig,
   plugins: [
     '@vuepress/plugin-back-to-top',
-    'typescript',
+    // 'typescript',
     [
       'vuepress-plugin-typescript',
       {
         tsLoaderOptions: {
-          configFile: '../../tsconfig.json',
           // 设置为 true，以在遇到 TypeScript 错误时不中断构建
           transpileOnly: true,
           // 其他 ts-loader 选项
