@@ -42,8 +42,8 @@ function toggleState() {
       color: #d3dce6;
       transition: all 0.2s;
       &:hover {
-      color: #3eaf7c;
-      cursor: pointer;
+        color: #3eaf7c;
+        cursor: pointer;
       }
   }
 }

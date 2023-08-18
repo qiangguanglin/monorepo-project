@@ -9,6 +9,6 @@ export default {
     '/en/': {
       lang: 'en-US',
       title: 'qg-components',
-      description: 'this is qg-components home'
+      description: 'This is qg-components home'
     }
 } as Locales

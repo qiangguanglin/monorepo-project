@@ -30,8 +30,7 @@
     "axios": "^1.4.0",
     "element-ui": "^2.15.12",
     "lodash": "^4.17.21",
-    "vue": "^2.7.14",
-    "vue-router": "3.0.0"
+    "vue": "^2.7.14"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",

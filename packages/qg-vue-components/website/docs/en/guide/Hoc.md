@@ -1,13 +1,13 @@
 ### Basic Usage
 
-Basic Input Usage
+Higher-Order Component Basic Usage
 <source-block>
     <template v-slot:comp>
         <press-row>
-            <input-demo1/>
+            <hoc-demo1/>
         </press-row>
     </template>
     <template v-slot:code>
-        <source-code lang="vue" url="/input/input-demo1.vue"/>
+        <source-code lang="vue" url="/HOC/hoc-demo1.vue"/>
     </template>
 </source-block>

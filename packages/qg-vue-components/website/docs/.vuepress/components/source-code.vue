@@ -13,6 +13,7 @@
 </template>
   
 <script lang="ts">
+import axios from 'axios';
 import { ref, defineComponent, onMounted, Ref } from 'vue';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-markup';
@@ -48,7 +49,7 @@ export default defineComponent({
       lineNumbers.value = count;
     }
     onMounted(async () => {
-      let prismLang;
+      let prismLang: Prism.Grammar;
       if (props.lang === 'vue') {
           prismLang = Prism.languages.markup;
       } else {
@@ -59,11 +60,13 @@ export default defineComponent({
           console.error(`Prism language module for "${props.lang}" not found.`);
           return;
       }
-      const response = await fetch(`${props.url}?_=${Date.now()}`);
-      const text = await response.text();
-      renderedCode.value = Prism.highlight(text, prismLang, props.lang);
-      (codeBlock.value as HTMLElement).innerHTML = renderedCode.value;
-      handleLineNumber(renderedCode.value);
+      await axios.get(`${props.url}?_=${Date.now()}`, {responseType: 'text'}).then(textContent => {
+        renderedCode.value = Prism.highlight(textContent.data, prismLang, props.lang);
+        (codeBlock.value as HTMLElement).innerHTML = renderedCode.value;
+        handleLineNumber(renderedCode.value);
+      }).catch(e => {
+        console.log(`资源请求报错-${e}`)
+      })
     })
 
     return {

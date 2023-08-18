@@ -22,12 +22,20 @@ const zhSidebar: SidebarItem[] = [
 // 英文左侧导航栏
 const enSidebar: SidebarItem[] = [
     // 首页-介绍
-    ['/en/guide/', 'Introduce'],
+    ['/guide/', 'Introduce'],
     {
         title: 'components',
         collapsable: false,
         children: [
-            ['../en/guide/Input', 'Input']
+            ['../en/guide/Input', 'Input'],
+            ['../en/guide/EditInput', 'Edit Input'],
+            ['../en/guide/InheritAutocomplete', 'InheritAutocomplete'],
+            ['../en/guide/InheritInput', 'InheritInput'],
+            ['../en/guide/Menu', 'Menu'],
+            ['../en/guide/Table', 'Table'],
+            ['../en/guide/Select', 'Select'],
+            ['../en/guide/Hoc', 'Hoc'],
+            ['../en/guide/Directives', 'Directives']
         ]
     }
 ]

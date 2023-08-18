@@ -19,6 +19,6 @@
 		"forceConsistentCasingInFileNames": true,
 		"allowSyntheticDefaultImports": true,
 	},
-	"include": ["docs/**/*.vue","docs/**/*.ts","docs/types/global-shims.d.ts"],
+	"include": ["docs/**/*.vue","docs/**/*.ts","docs/types/global-shims.d.ts", "docs/.vuepress/**/*.vue", "docs/.vuepress/**/*.ts"],
 	"exclude": ["node_modules"]
 }

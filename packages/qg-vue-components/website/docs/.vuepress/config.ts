@@ -25,4 +25,9 @@ export default defineConfig({
       },
     ],
   ],
+  configureWebpack: {
+    node: {
+      global: true,
+    },
+  }
 })

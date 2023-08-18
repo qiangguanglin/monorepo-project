@@ -1,13 +1,13 @@
 ### Basic Usage
 
-Basic Input Usage
+Table Component Basic Usage
 <source-block>
     <template v-slot:comp>
         <press-row>
-            <input-demo1/>
+            <table-demo1/>
         </press-row>
     </template>
     <template v-slot:code>
-        <source-code lang="vue" url="/input/input-demo1.vue"/>
+        <source-code lang="vue" url="/table/table-demo1.vue"/>
     </template>
 </source-block>

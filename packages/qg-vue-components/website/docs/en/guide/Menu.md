@@ -1,13 +1,13 @@
 ### Basic Usage
 
-Basic Input Usage
+Recursive Menu Basic Usage
 <source-block>
     <template v-slot:comp>
         <press-row>
-            <input-demo1/>
+            <menu-demo1/>
         </press-row>
     </template>
     <template v-slot:code>
-        <source-code lang="vue" url="/input/input-demo1.vue"/>
+        <source-code lang="vue" url="/menu/menu-demo1.vue"/>
     </template>
 </source-block>

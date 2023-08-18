@@ -102,7 +102,6 @@ export default defineComponent({
         }, {immediate: true,deep: true,});
         onMounted(() => {
             const tempStore: any = table || {};
-			console.log('tempStore: ', tempStore.value);
             const instance = getCurrentInstance();
             for(const key in tempStore.value) {
                 if(typeof tempStore.value[key] === 'function' && instance?.proxy) {

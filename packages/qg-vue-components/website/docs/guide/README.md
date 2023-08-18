@@ -15,20 +15,20 @@ sidebarDepth: 2
 :::
 
 ```bash
-npm install test-component -S
+npm install qg-component -S
 ```
 
 ```bash
-yarn add test-component -S
+yarn add qg-component -S
 ```
 
 ## 使用
 
 ```js
-import testComp from 'test-component';
-import 'test-component/lib/theme/index.css';
+import QgComp from 'qg-component';
+import 'qg-component/lib/theme/index.css';
 
-Vue.use(testComp);
+Vue.use(QgComp);
 ```
 
 ### 按需引入
@@ -60,7 +60,7 @@ plugins: [
 
 ## UMD 使用
 
-目前没有实现混合打包，暂不支持直接引入，请[clone 项目后自行打 lib 包](https://github.com/ShuQingX/vue-comp-test/blob/main/package.json)
+目前没有实现混合打包，暂不支持直接引入，请[clone 项目后自行打 lib 包](https://github.com/qiangguanglin/monorepo-project.git)
 
 ```js
 "build:lib": "vue-cli-service build --target lib --dest lib --name test-comp-base packages/index.js"

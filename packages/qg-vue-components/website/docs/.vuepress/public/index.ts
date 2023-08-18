@@ -1,4 +1,3 @@
-// @ts-nocheck
 import inputDemo1 from './input/input-demo1.vue';
 import editInputDemo1 from './edit-input/edit-input-demo1.vue';
 import inheritAutocompleteDemo1 from './inherit-autocomplete/inherit-autocomplete-demo1.vue';

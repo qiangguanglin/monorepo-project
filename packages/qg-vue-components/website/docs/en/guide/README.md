@@ -2,46 +2,46 @@
 sidebarDepth: 2
 ---
 
-此组件库基于 `element-ui` 二次开发。单纯学习使用。
+This component library is based on element-ui for secondary development. It is for learning purposes only.
 
-:tada: 支持按需引入。
+:tada: Supports on-demand import。
 
-:100: 兼容 IE 12+ 。:fire::fire::fire:
+:100: Compatible IE 12+ 。:fire::fire::fire:
 
-## 安装
+## Install
 
 ::: warning
-没有上传 npm 小伙伴们不要尝试下载。
+Has not been uploaded to npm, please do not attempt to download.
 :::
 
 ```bash
-npm install test-component -S
+npm install qg-component -S
 ```
 
 ```bash
-yarn add test-component -S
+yarn add qg-component -S
 ```
 
-## 使用
+## Usage
 
 ```js
-import testComp from 'test-component';
-import 'test-component/lib/theme/index.css';
+import QgComp from 'qg-component';
+import 'qg-component/lib/theme/index.css';
 
-Vue.use(testComp);
+Vue.use(QgComp);
 ```
 
-### 按需引入
+### On-demand import
 
-借助 `babel-plugin-componet` 我们可以只引入需要的组件，以达到减小项目体积的目的。
+With the help of `babel-plugin-component`, we can import only the required components to reduce the project size.
 
-首先，安装 `babel-plugin-component`：
+First, install `babel-plugin-component`:
 
 ```bash
 npm install babel-plugin-component -D
 ```
 
-在 `.babel.config.js` 中新增
+Add in `.babel.config.js`
 
 ```js
 plugins: [
@@ -58,9 +58,9 @@ plugins: [
 ];
 ```
 
-## UMD 使用
+## UMD Usage
 
-目前没有实现混合打包，暂不支持直接引入，请[clone 项目后自行打 lib 包](https://github.com/ShuQingX/vue-comp-test/blob/main/package.json)
+Currently, mixed packaging is not implemented, and direct import is not supported. [Please clone the project and build the lib package](https://github.com/qiangguanglin/monorepo-project.git) yourself.
 
 ```js
 "build:lib": "vue-cli-service build --target lib --dest lib --name test-comp-base packages/index.js"

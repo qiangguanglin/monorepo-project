@@ -1,12 +1,12 @@
 const zhNav = [
     { text: '首页', link: '/' },
     { text: '文档', link: '/guide/' },
-    { text: 'GitHub', link: 'https://github.com/MssText/mssui'}
+    { text: 'GitHub', link: 'https://github.com/qiangguanglin/monorepo-project'}
 ]
 const enNav = [
-    { text: 'home', link: '/' },
-    { text: 'document', link: '/guide/' },
-    { text: 'GitHub', link: 'https://github.com/MssText/mssui'}
+    { text: 'home', link: '/en/' },
+    { text: 'document', link: '/en/guide/' },
+    { text: 'GitHub', link: 'https://github.com/qiangguanglin/monorepo-project'}
 ]
 
 export {
