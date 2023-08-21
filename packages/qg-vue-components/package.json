@@ -18,16 +18,12 @@
     "package.json",
     "README.md"
   ],
-  "publishConfig": {
-    "registry": "http://r.npm.sankuai.com/"
-  },
+  "publishConfig": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qiangguanglin/monorepo-project.git"
   },
-  "scripts": {
-    "test": "node ./__tests__/index.test.js"
-  },
+  "scripts": {},
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.15.12",

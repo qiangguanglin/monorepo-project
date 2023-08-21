@@ -18,9 +18,7 @@
     "package.json",
     "README.md"
   ],
-  "publishConfig": {
-    "registry": "http://r.npm.sankuai.com/"
-  },
+  "publishConfig": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qiangguanglin/monorepo-project.git"
