@@ -46,7 +46,7 @@ export default defineComponent({
             rateValue: 0,
         })
         function querySearch(queryString, cb) {
-            const results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
+            const results = queryString ? restaurants.filter(createFilter(queryString)) : restaurants;
             // 调用 callback 返回建议列表的数据
             cb(results);
         }

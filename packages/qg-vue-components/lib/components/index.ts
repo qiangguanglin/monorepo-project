@@ -5,6 +5,7 @@ import qgInheritInput from './inherit-input.vue';
 import qgMenu from './menu/index.vue';
 import qgTable from './table/index.vue';
 import QgSelect from './select.vue';
+import RemoteSelect from './remote-select/select.vue'
 
 export default [
     qgInput,
@@ -13,5 +14,6 @@ export default [
     qgInheritInput,
     qgMenu,
     qgTable,
-    QgSelect
+    QgSelect,
+    RemoteSelect
 ]

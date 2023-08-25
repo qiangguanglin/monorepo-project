@@ -15,7 +15,8 @@ const zhSidebar: SidebarItem[] = [
         ['../guide/Table', '表格'],
         ['../guide/Select', '选择器'],
         ['../guide/Hoc', '高阶组件'],
-        ['../guide/Directives', '自定义指令']
+        ['../guide/Directives', '自定义指令'],
+        ['../guide/RemoteSelect', '远程搜索下拉框']
       ]
     }
 ]

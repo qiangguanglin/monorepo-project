@@ -5,7 +5,6 @@ const draggable = {
     inserted: function (el: DirectElement, binding: DirectiveBinding<null>) {
       el.style.cursor = 'move'
       el.onmousedown = function (e: MouseEvent) {
-        console.log('e: ', e);
         let disx = e.pageX - el.offsetLeft
         let disy = e.pageY - el.offsetTop
         document.onmousemove = function (e) {

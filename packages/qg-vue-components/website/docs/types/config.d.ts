@@ -52,3 +52,16 @@ export interface LocaleConfig {
 }
 
 export type Locales = { [path: string]: LocaleConfig }
+
+export interface Options {
+  value: number | string,
+  label: string
+}
+
+export interface RemoteParams {
+  value: string | number,
+  paging: { 
+    offset:number, 
+    limit:number 
+  }
+}
