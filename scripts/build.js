@@ -5,6 +5,7 @@ const path = require('path');
 const { build } = require('esbuild');
 const  yargs = require('yargs/yargs');
 const _merge = require('lodash/merge');
+const { ignoreDirs, webpackDirs } = require('./config');
 
 const { argv:args } = yargs(process.argv.slice(2));
 async function buildPackages() {
@@ -12,7 +13,8 @@ async function buildPackages() {
     const packagesDirPath = path.resolve(__dirname, '../packages');
     if(args.all) {
         const dirNames = await fs.promises.readdir(packagesDirPath, { withFileTypes: true });
-        packageDirNames = dirNames.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
+        packageDirNames = dirNames.filter(dirent => dirent.isDirectory() && !ignoreDirs.includes(dirent.name) && !webpackDirs.includes(dirent.name)).map(dirent => dirent.name);
+        console.log('packageDirNames: ', packageDirNames);
     } else {
         const resolveDirs = process.cwd()?.split('\/') || [];
         packageDirNames = [].concat(resolveDirs[resolveDirs.length-1]);
@@ -23,12 +25,12 @@ async function buildPackages() {
         await util.promisify(exec)(`rm -rf ${buildPath}`);
         const conf = require(path.resolve(__dirname, `../packages/${v}/package.json`));
         let buildConfig = {};
-        try {
+        const tempEsbuildConfigPath = path.resolve(__dirname, `../packages/${v}/esbuild.config.js`);
+        if (fs.existsSync(tempEsbuildConfigPath)) {
+            console.log(`${v}包存在esbuild.config.js文件`);
             buildConfig = require(path.resolve(__dirname, `../packages/${v}/esbuild.config.js`));
             buildConfig.entryPoints = buildConfig.entryPoints.map(vv => path.join(packagesDirPath, v, vv));
             buildConfig.outdir = path.join(packagesDirPath, v, buildConfig.outdir);
-        } catch(e) {
-            console.log('未找到esbuild.config.js文件', e);
         }
         const tempPath = path.join(packagesDirPath, v, './lib/index.js');
         const defaultConfig = {

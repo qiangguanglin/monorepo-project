@@ -1,0 +1,30 @@
+{
+  "name": "interview-question-code",
+  "version": "0.0.1",
+  "description": "面试题代码",
+  "keywords": [
+    "js"
+  ],
+  "author": "qiangguanglin",
+  "homepage": "https://github.com/qiangguanglin/monorepo-project#readme",
+  "license": "ISC",
+  "main": "build/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiangguanglin/monorepo-project.git"
+  },
+  "scripts": {
+    "ts": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "4.9.5"
+  },
+  "bugs": {
+    "url": "https://github.com/qiangguanglin/monorepo-project/issues"
+  }
+}
