@@ -1,6 +1,6 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const { ProgressPlugin } = require('webpack');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin'); // webpack显示进度条的插件
 
 module.exports = {
     mode: 'development',
@@ -49,6 +49,6 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new ProgressPlugin(),
+        new ProgressBarPlugin(),
     ],
 };

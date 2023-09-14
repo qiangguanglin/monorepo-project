@@ -62,7 +62,7 @@ function buildPackages() {
                 if (stats.hasWarnings()) {
                     console.warn(stats.toJson().warnings);
                 }
-                console.log(chalk.green(`${v}包编译完成！！！`));
+                console.log(chalk.green(`${v}包打包完成！！！`));
             });
         } else {
             console.log(chalk.red(`${v}包缺少webpack.config文件`));
