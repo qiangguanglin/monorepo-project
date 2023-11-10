@@ -21,3 +21,40 @@ type FnReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 type Func = () => number;
 
 type Num = FnReturnType<Func>; // Num的类型是number
+
+/**
+ * 使用泛型和keyof、extends来约束类型
+ */
+const objOne = {
+    oneKey: 1,
+    twoKey: '2'
+}
+const objTwo = {
+    key1: 1,
+    key2: '2',
+    key3: 3
+}
+function handler<T extends object, K extends keyof T>(_obj: T, _key: K) {}
+handler(objTwo, 'key2') // 只能输入objTwo有的key
+
+/**
+ * TS的类型验算，前置的不定量参数
+ */
+type JSTypeMap = {
+    'string': string,
+    'number': number,
+    'boolean': boolean,
+    'object': object,
+    'function': Function,
+    'symbol': symbol,
+    'undefined': undefined,
+    'bigint': bigint
+}
+type JSTypeName = keyof JSTypeMap; // keyof是获取索引，即：'string' | 'number' | 'boolean' | 'object' | 'function ...，联合类型
+type ArgsType<T extends JSTypeName[]> = {
+    [I in keyof T]: JSTypeMap[T[I]]
+}
+function addImpl<T extends JSTypeName[]>(...args: [...T, (...args: ArgsType<T>) => any]): void  {}
+
+addImpl('string', 'boolean', 'number', (a, b,c) => {}); // 方法的前置参数必须满足是JSTypeMap的key，最后一个参数必须是函数，并且其入参是前置参数对应的类型
+

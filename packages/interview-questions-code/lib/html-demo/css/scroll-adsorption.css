@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**
+实现滚动吸附效果
+1.父元素添加scroll-snap-type，接受两个参数
+    轴方向：x/y
+    吸附严格性：mandatory（必须吸附到最近的元素）或 proximity（在接近吸附点时才吸附）
+2.子元素添加scroll-snap-align，接受两个个参数，第一个参数是x轴方向的对齐方式，第二个参数是垂直方向的对齐方式
+    none：元素不会吸附到任何点
+    start：元素的起始边会吸附到滚动容器的起始边
+    end：元素的结束边会吸附到滚动容器的结束边
+    center：元素的中心点会吸附到滚动容器的中心点
+*/
+#layout {
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+#layout::-webkit-scrollbar {
+  display: none;
+}
+
+#container {
+  display: flex;
+  width: max-content;
+}
+
+.block-div {
+  width: 400px;
+  height: 200px;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-text {
+  font-size: 2em;
+}
+
+.block-div-0 {
+  background-color: hsl(0, 100%, 50%);
+}
+
+.block-div-1 {
+  background-color: hsl(36, 100%, 50%);
+}
+
+.block-div-2 {
+  background-color: hsl(72, 100%, 50%);
+}
+
+.block-div-3 {
+  background-color: hsl(108, 100%, 50%);
+}
+
+.block-div-4 {
+  background-color: hsl(144, 100%, 50%);
+}
+
+.block-div-5 {
+  background-color: hsl(180, 100%, 50%);
+}
+
+.block-div-6 {
+  background-color: hsl(216, 100%, 50%);
+}
+
+.block-div-7 {
+  background-color: hsl(252, 100%, 50%);
+}
+
+.block-div-8 {
+  background-color: hsl(288, 100%, 50%);
+}
+
+.block-div-9 {
+  background-color: hsl(324, 100%, 50%);
+}

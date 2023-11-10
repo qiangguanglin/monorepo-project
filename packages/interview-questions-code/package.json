@@ -18,11 +18,16 @@
     "url": "git+https://github.com/qiangguanglin/monorepo-project.git"
   },
   "scripts": {
+    "sass": "sass --watch lib/html-demo/scss:lib/html-demo/css --no-source-map",
     "ts": "tsc"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-html-parser": "^6.1.11",
+    "url-regex": "^5.0.0"
+  },
   "devDependencies": {
-    "typescript": "4.9.5"
+    "sass": "^1.66.1",
+    "typescript": "^5.1.6"
   },
   "bugs": {
     "url": "https://github.com/qiangguanglin/monorepo-project/issues"

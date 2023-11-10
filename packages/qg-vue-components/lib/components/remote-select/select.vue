@@ -54,7 +54,6 @@ export default defineComponent({
         },
     },
     setup(props, context) {
-        const vNewScroll = ref(scroll);
         const loading = ref(false);
         const options: Ref<Options[]> = ref([]);
         const instance = getCurrentInstance();
@@ -165,7 +164,6 @@ export default defineComponent({
         // 初始化options
         setOptions('');
         return {
-            vNewScroll,
             loading,
             options,
             loadingDom,

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    </meta>
+    <title>滚动吸附</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/scroll-adsorption.css">
+</head>
+
+<body>
+    <div id="layout">
+        <div id="container"></div>
+    </div>
+</body>
+<script>
+    const container = document.getElementById('container');
+    const domArr = new Array(10).fill(null);
+    domArr.forEach((v, index) => {
+        const tempDom = document.createElement('div');
+        const textDom = document.createElement('div');
+        tempDom.classList.add('block-div-' + index, 'block-div');
+        textDom.className = 'block-text';
+        textDom.innerText = '这是第'+(index+1)+'张';
+        tempDom.appendChild(textDom);
+        container.appendChild(tempDom);
+    })
+</script>
+
+</html>
