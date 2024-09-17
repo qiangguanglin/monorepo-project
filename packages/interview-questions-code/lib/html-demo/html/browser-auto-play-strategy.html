@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+        <!-- chrome自动播放策略是为了改善用户体验
+        1.始终允许静音自动播放
+        2.在以下情况，带声音的自动播放是允许的：
+            用户已经与当前域进行了交互
+            在桌面设备上，用户媒体参与度指数阈值已超过
+            用户已将网站添加到移动设备上的主屏幕或在桌面上安装了PWA
+        3.顶部帧可以将自动播放权限委派给其iframe，以允许带声音自动播放 -->
+        <!-- 方案：
+            交互后播放：先尝试自动播放，若发生异常，则引导用户进行交互操作，然后再进行播放
+            交互后出声：先静音播放，然后根据是否能够自动播放决定取消静音，如果能自动播放，则自动播放，取消静音；不能自动播放，引导用户进行交互操作后取消静音 -->
+    </meta>
+    <title>浏览器自动播放策略</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .vdo-container {
+            display: flex;
+            justify-content: center;
+        }
+        .video {
+            width: 338px;
+            height: 600px;
+        }
+        .modal {
+            position: absolute;
+            height: 600px;
+            width: 338px;
+            background-color: rgb(191, 189, 189, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bnt {
+            cursor: pointer;
+            width: 96px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #409eff;
+            background-color: #409eff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vdo-container">
+        <video class="video" controls autoplay>
+            <source src="../static/video/164_1700552181.mp4" type="video/mp4">
+        </video>
+        <div class="modal">
+            <button class="bnt">自动播放</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    const vdo = document.querySelector('.video')
+    const modal = document.querySelector('.modal')
+    const bnt = document.querySelector('.bnt')
+    async function paly() {
+        try {
+            await vdo.play();
+            modal.style.display = 'none'
+            bnt.removeEventListener('click', paly)
+        }catch(e) {
+            bnt.addEventListener('click', paly)
+        }
+    }
+    paly()
+</script>
+
+</html>

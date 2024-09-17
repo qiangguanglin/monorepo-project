@@ -1,7 +1,7 @@
 <template>
     <el-menu>
         <my-menu :data="menuList"></my-menu>
-      </el-menu>
+            </el-menu>
 </template>
 
 <script lang="ts">
@@ -29,3 +29,10 @@ export default defineComponent({
 })
 
 </script>
+<style scoped lang="scss">
+::v-deep .el-menu-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+</style>

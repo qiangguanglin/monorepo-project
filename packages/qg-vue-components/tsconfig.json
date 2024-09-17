@@ -18,6 +18,9 @@
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 	},
+	"vueCompilerOptions": {
+		"target": 2.7
+	},
 	"include": ["lib/**/*.vue","lib/**/*.ts"],
 	"exclude": ["node_modules", "website"]
 }

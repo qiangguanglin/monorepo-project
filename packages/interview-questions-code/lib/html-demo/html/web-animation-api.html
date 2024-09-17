@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8"/>
+    <!-- web animation api是官方的api，效率比js动画和css动画更高 -->
+    <!-- 效率高到不需要主线程参与 -->
+    <title>web-animation-api</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(155, 1, 1);
+            border-radius: 100px;
+            position: absolute;
+            top: -50px;
+            left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+
+<script>
+    const ball = document.querySelector('.ball')
+    // 将小球初始化位置到屏幕中间
+    function init() {
+        const x = window.innerWidth / 2
+        const y = window.innerHeight / 2
+        ball.style.transform = `translate(${x}px, ${y}px)`
+    }
+    function move(x, y) {
+        const rect = ball.getBoundingClientRect() // 获取元素的大小以及其相对于视口的位置
+        const ballX = rect.left + rect.width/2 // 小球的中心x位置
+        const ballY = rect.top + rect.height/2 // 小球的中心y位置
+        ball.getAnimations().forEach(animation => animation.cancel()) // 清除存储的动画，每次web animation api都会存一个动画
+        const rad = Math.atan2(y - ballY, x - ballX) // 获取需要旋转的夹角
+        const deg = (rad*180)/Math.PI
+        ball.animate([ // web animation api，类似于css的animation
+            {
+                transform: `translate(${ballX}px, ${ballY}px) rotate(${deg}deg)`,
+            },
+            {
+                transform: `translate(${ballX}px, ${ballY}px) rotate(${deg}deg) scaleX(1.5)`, // 旋转加缩放
+                offset: 0.6
+            },
+            {
+                transform: `translate(${x}px, ${y}px) rotate(${deg}deg) scaleX(1.5)`,
+                offset: 0.8
+            },
+            {
+                transform: `translate(${x}px, ${y}px)`
+            }
+        ],
+        {
+            duration: 1000,
+            fill: 'forwards'
+        })
+    }
+    // 添加点击事件，获取点击的坐标位置
+    window.addEventListener('click', (e) => {
+        const x = e.clientX
+        const y = e.clientY
+        move(x,y)
+    })
+    init()
+</script>
+
+</html>

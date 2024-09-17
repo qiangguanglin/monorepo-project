@@ -11,7 +11,8 @@ import copyDemo from './directives/copy-demo.vue';
 import debounceDemo from './directives/debounce-demo.vue';
 import draggableDemo from './directives/draggable-demo.vue';
 import throttleDemo from './directives/throttle-demo.vue';
-import remoteSelectDemo from './remote-select/remote-select-demo.vue'
+import remoteSelectDemo from "./remote-select/remote-select-demo.vue";
+import customDebounceDemo1 from "./custom-debounce/custom-debounce-demo1.vue";
 
 export default [
     inputDemo1,
@@ -27,5 +28,6 @@ export default [
     debounceDemo,
     draggableDemo,
     throttleDemo,
-    remoteSelectDemo
-]
+    remoteSelectDemo,
+    customDebounceDemo1,
+];
