@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span>防抖输入框</span>
+      <input id="input1" />
+    </div>
+    <div>
+      <span>节流（时间戳法）输入框</span>
+      <input id="input2" />
+    </div>
+    <div>
+      <span>节流（定时器法）输入框</span>
+      <input id="input3" />
+    </div>
+  </body>
+  <script type="module">
+    import { debounce, throttleByTimestamp, throttleByTimer } from "./utils.js";
+    // 防抖代码
+    const input1 = document.getElementById("input1");
+    const debounceHandle = debounce((event) => {
+      console.log(event.target.value);
+    }, 500);
+    input1.oninput = (event) => {
+      debounceHandle(event);
+    };
+
+    // 节流（时间戳）代码
+    const input2 = document.getElementById('input2')
+    const throttleHandleByTimestamp = throttleByTimestamp((event) => {
+        console.log(event.target.value)
+    }, 1000)
+    input2.oninput = (event) => {
+        throttleHandleByTimestamp(event)
+    }
+
+    // 节流（定时器）代码
+    const input3 = document.getElementById('input3')
+    const throttleHandleByTimer = throttleByTimer((event) => {
+        console.log(event.target.value)
+    }, 1000)
+    input3.oninput = (event) => {
+        throttleHandleByTimer(event)
+    }
+  </script>
+</html>
