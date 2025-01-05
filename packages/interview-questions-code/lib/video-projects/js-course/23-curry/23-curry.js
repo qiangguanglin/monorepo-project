@@ -14,6 +14,8 @@ function curry() {
     // 参数不够则记录当前参数，并继续返回函数，当参数够了的时候，就执行函数
     function _curry() {
         args.push(...arguments) // 记录参数
+        console.log('-----222', args);
+        
         if(args.length === fn.length) {
             return fn.apply(this, args)
         }
